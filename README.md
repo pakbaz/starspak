@@ -6,7 +6,7 @@ Knowledge for All, exactly what you need to know. no less no more
 
 * Quality, carefully curated content free for all
 * Contents are educational but also practical with real world examples. It is made to get you ready for a job or a promotion.
-* Contents is free and open source and will always be
+* All Core educational and practical Contents are (and always will be) free and open source
 
 ## Markdown naming and Contents
 

@@ -4,8 +4,8 @@ Knowledge for All, exactly what you need to know. no less no more.
 
 ## Motivation
 
-Although, there are a lot of great learning sources for everyone out there most of them costs money and/or lack clear direction, cohesive goal and many are biased toward specific platform or company whether the contents are relevant or not therefore, doesn't have learners best interest in mind rather are part of commercial budget.
-Morover, classic academic approach for mastering any specific topic, regardless of the level, is greatly time-consuming as the most important/least important content put together and may take months or years to master.
+Although, there are a lot of great learning platforms/services for everyone out there, most of them costs money and/or lack clear direction, cohesive goal and many are biased toward specific platform or company whether the contents are relevant or not therefore, doesn't have learners best interest in mind rather are part of commercial budget.
+Morover, classic academic approach for mastering any specific topic, regardless of the level, is greatly time-consuming and very expensive as the most important/least important content put together and may take months or years to master.
 
 We believe there is room for a free, open source, unbiased and high-quality learning platform with conscise materials free of ads and cross platform support.
 

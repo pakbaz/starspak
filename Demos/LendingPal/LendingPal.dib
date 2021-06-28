@@ -1,0 +1,20 @@
+#!markdown
+
+# Writing the Code
+
+In order to code, first we need to define the object. In most programming languages, Object usualy represent a real world entity, for example, chair, car, pen, mobile, laptop etc or a data record which is what we need. In other words, object is an entity that has state and behavior. Here, state means data and behavior means functionality. Object is a runtime entity, it is created at runtime. Object is an instance of a class.
+
+## Data Transfer Object (DTO)
+
+A DTO is an object whose purpose is to transfer data. By definition, a DTO should only contain data or state, not logic or behavior. If a DTO contains logic, it is not a DTO. Usually Models contain behavior and Plain Old Objects or Data Transfer Objects only contain state.
+
+#!csharp
+
+public class LendingRecord
+{
+  public string Borrower { get; set; }
+  public string Lender { get; set; }
+  public decimal Amount { get; set; }
+  public DateTime Date { get; set; }
+  public string Comments {get; set; }
+} 

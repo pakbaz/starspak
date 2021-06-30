@@ -18,3 +18,28 @@ public class LendingRecord
   public DateTime Date { get; set; }
   public string Comments {get; set; }
 } 
+
+#!csharp
+
+var lr = new LendingRecord { Borrower = "Liam", Lender = "John" , Amount = 10 };
+
+#!csharp
+
+public static var records = new List<LendingRecord>();
+var takingInput = true;
+LendingRecord record;
+
+while (takingInput)
+{
+    record = new LendingRecord();
+    Console.Write("Who is Borrowing? : ");
+    record.Borrower = Console.ReadLine();
+    Console.Write("Who is Lending? : ");
+    record.Lender = Console.ReadLine();
+    Console.Write("What is the Amount? : ");
+    record.Amount = Convert.ToDecimal(Console.ReadLine()); //Input needs to be checked. Potential runtime error!
+    record.Date = DateTime.Now;
+
+    Console.WriteLine("Add More? Yes or No");
+    if(Console.ReadLine().StartsWith("N")) takingInput = false;
+}

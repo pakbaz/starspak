@@ -43,25 +43,30 @@ namespace ConsoleApp
                 var records = Records.GetAll();
 
                 //one query takes care of all scenarios
-                var query = from lenders in records.Where(r=> r.Borrower.ToLower() == p.ToLower())
+                var query1 = from lenders in records.Where(r=> r.Borrower.ToLower() == p.ToLower())
                             join borrowers in records.Where(r=> r.Lender.ToLower() == p.ToLower()) 
                                 on lenders.Lender equals borrowers.Borrower
+                            into borrowingRecordGroup
+                            select new {Inquirer = p, Other = lenders.Lender, Amount = lenders.Amount - borrowingRecordGroup.Sum(i=>i.Amount) };
+                            
+                var query2 = from borrowers in records.Where(r=> r.Lender.ToLower() == p.ToLower()) 
+                             join lenders in records.Where(r=> r.Borrower.ToLower() == p.ToLower())
+                                on borrowers.Borrower equals lenders.Lender
                             into lendingRecordGroup
-                            select new LendingRecord{Borrower = p, Lender = lenders.Lender, Amount = lenders.Amount - lendingRecordGroup.Sum(i=>i.Amount) };
-                            
-                            
-
+                            select new {Inquirer = p, Other = borrowers.Borrower, Amount = -(borrowers.Amount - lendingRecordGroup.Sum(i=>i.Amount)) };
+                
+                var query = query1.Union(query2).DistinctBy(i=>i.Other);
                 if(query.Any())
                 {
                     foreach (var record in query)
                     {
                         if(record.Amount > 0)
                         {
-                            Console.WriteLine($"{p} Owes {record.Lender} total ${record.Amount}");
+                            Console.WriteLine($"{p} Owes {record.Other} total ${record.Amount}");
                         }
                         else if (record.Amount < 0)
                         {
-                            Console.WriteLine($"{record.Lender} Owes {p} total ${-record.Amount}");
+                            Console.WriteLine($"{record.Other} Owes {p} total ${-record.Amount}");
                         }
                     }
                 }

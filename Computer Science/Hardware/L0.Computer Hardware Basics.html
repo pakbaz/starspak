@@ -1,0 +1,673 @@
+<!doctype html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+    
+        <title>Programming Languages Basics - Level 0</title>
+    
+        <meta name="description" content="Programming Languages Basics - Level 0">
+        <meta name="author" content="Sepehr Pakbaz">
+    
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reset.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/theme/black.min.css" id="theme">
+    
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/monokai.min.css">
+    </head>
+    
+    <body>
+    
+        <div class="reveal">
+    
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <a href="https://revealjs.com">
+                        <img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo"
+                            style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+                    </a>
+                    <h3>The HTML Presentation Framework</h3>
+                    <p>
+                        <small>Created by <a href="http://hakim.se">Hakim El Hattab</a> and <a
+                                href="https://github.com/hakimel/reveal.js/graphs/contributors">contributors</a></small>
+                    </p>
+                    
+                </section>
+                <section>
+                    <h2>What is Computer Hardware?</h2>
+                    <p>Any physical component related to computer is called Computer Hardware.</p>
+                    <aside class="notes">
+                        This is probably the most concise introduction to computer hardware you can ever find anywhere. Anything you can touch is called hardware
+                    </aside>
+                </section>
+                <section>
+                    <h2>Computer Hardware Categories</h2>
+                    <ul>
+                        <li>Processor</li>
+                        <li>Memory</li>
+                        <li>Input/Output (I/O)</li>
+                        <li>Networking</li>
+                    </ul>
+                    <aside class="notes">
+                        Any Computer regardless of the power, size and form-factor consists of few basic component in order to Store, Process and transfer data. Data either transferred into another device or computer for further processing or turns into human friendly information which is either displayed on a screen, played back from speaker or audio device.
+                        Network Interface is technically in the Category of I/O but it is so important it deserves its own categoy. 
+                    </aside>
+                </section>
+                <section>
+                    <h2>Processor</h2>
+                    <p>Capable of processing billions of binary operation per seconds. Performance defined by:</p>
+                    <ol>
+                        <li><strong>Speed:</strong> how fast they can process information and typically measured in GHZ (Giga Hertz)</li>
+                        <li><strong>Cores:</strong> how many units inside CPU can perform in parallel or work simultaneously each at the given clock speed. The more cores you have, the more effective bandwidth you will have.</li>
+                    </ol>
+                    <aside class="notes">
+                        It is typically at the heart of any computer or board and as the name stands its job is to process information typically in binary format. it also called by other names such as micro-processor, CPU (central processing unit) or GPU (graphical processing unit) if the main task is to process graphical data.
+                        The easiest way to understand the concept of cores and clock speed is to think about a highway as a computer. If you imagine cars as data, and toll or police checkpoint as processor. in order to process more cars or increase efficiency is to increase the speed of processing in each station (clock speed) and increase the stations or lanes in the highway (cores) which then both affect the traffic and efficiency.
+                        Processors have architecture that they have been designed based on and the most popular architectures for CPUs are X86 which was developer by intel and ARM (Advanced Risk Machine) which was originally developed by Acorn Computers.
+                        Additionally, depending on processor's architecture and manufacturing fabrication size, processor's efficiency may dramatically change. Since the building block of processors are tiny transistors, the rule of thumb is that the smaller the manufacturing fabrication process size for those transistors, the more power efficient it becomes. (Those size are typically measured at nano-meter or nm for short)
+                    </aside>
+                </section>
+                <section>
+                    <h2>Memory</h2>
+                    <ul>
+                        <li>Data to be processed by the processor and the result of the process will be stored in memory.  </li>
+                        <li>Processor must have direct access to Random Access Memory (RAM)   </li>
+                        <li>Memory performance is also measured with the speed which is also measured with GHZ similar to CPU and the number of direct channels that they have with CPU.</li>
+                    </ul>
+                    <aside class="notes">
+                        Data that is going to be processed by the processor has to come from somewhere right? Whether its a live data stream, or it is stored somewhere in a permanent location, we need memory to temporarily store these information that is going to be processed by the processor. Memory typically very close to Processor in order to maximize efficiency its tightly coupled with CPU with dedicated and direct bus. Such memories with high performance/bandwidth is also referred to as **RAM** short for Random Access Memory. There are also permanent storage option available for computers to store/save data even when the power goes out. These memory are Solid State Storage (or SSD for short) without moving parts or legacy disk drives that has physical discs that spins and data is stored with tiny magnets. Legacy disk drives are typically slower and more prone to data corruption compared to SSD disks but SSD drives are much more expensive.
+                    </aside>
+                </section>
+                <section>
+                        <h2>Input/Output</h2>
+                        <ul>
+                            <li>Input/Output (I/O) is a set of electronics component to read/transfer/write data to/from user or from one system to another. </li>
+                            <li>Just like memory and cpu, Input/Output performance also affects overall system performance specially for tasks with a lot of data read/writes.</li>
+                        </ul>
+                    <aside class="notes">
+                        Anything From Keyboard, Mouse, Pen, Camera, Mic, or even Networking components can be I/O
+                    </aside>
+                </section>
+                <section>
+                    <h2>Network Interface</h2>
+                    <p>Most computers whether its a tiny board, a smartphone or a server computer are equipped with Network Interface Card (or NIC for short) which enables them to communicate with other computers on the network or internet. </p>
+                    <aside class="notes">
+                        Older computers did not even have network interface (even today technically you can have a computer without a NIC), but after computers became popular it was quickly revealed that the most interesting things computers can do is to communicate with other computers/systems and transfer data/messages from one computer to another either on the same network or over the internet.
+                    </aside>
+                </section>
+                <!-- Example of nested vertical slides -->
+                <section>
+                    <section>
+                        <h2>Vertical Slides</h2>
+                        <p>Slides can be nested inside of each other.</p>
+                        <p>Use the <em>Space</em> key to navigate through all slides.</p>
+                        <br>
+                        <a href="#" class="navigate-down">
+                            <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238"
+                                data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+                        </a>
+                    </section>
+                    <section>
+                        <h2>Basement Level 1</h2>
+                        <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Basement Level 2</h2>
+                        <p>That's it, time to go back up.</p>
+                        <br>
+                        <a href="#/2">
+                            <img class="r-frame" style="background: rgba(255,255,255,0.1); transform: rotate(180deg);"
+                                width="178" height="238" data-src="https://static.slid.es/reveal/arrow.png" alt="Up arrow">
+                        </a>
+                    </section>
+                </section>
+    
+                <section>
+                    <h2>Slides</h2>
+                    <p>
+                        Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out
+                        at <a href="https://slides.com" target="_blank">https://slides.com</a>.
+                    </p>
+                </section>
+    
+                <section data-visibility="hidden">
+                    <h2>Hidden Slides</h2>
+                    <p>
+                        This slide is visible in the source, but hidden when the presentation is viewed. You can show all
+                        hidden slides by setting the `showHiddenSlides` config option to `true`.
+                    </p>
+                </section>
+    
+                <section data-auto-animate>
+                    <h2 data-id="code-title">Pretty Code</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            import React, { useState } from 'react';
+    
+                            function Example() {
+                              const [count, setCount] = useState(0);
+    
+                              return (
+                                ...
+                              );
+                            }
+                        </code></pre>
+                    <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
+                </section>
+    
+                <section data-auto-animate>
+                    <h2 data-id="code-title">With animations</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers="|4,8-11|17|22-24"><script type="text/template">
+                            import React, { useState } from 'react';
+    
+                            function Example() {
+                              const [count, setCount] = useState(0);
+    
+                              return (
+                                <div>
+                                  <p>You clicked {count} times</p>
+                                  <button onClick={() => setCount(count + 1)}>
+                                    Click me
+                                  </button>
+                                </div>
+                              );
+                            }
+    
+                            function SecondExample() {
+                              const [count, setCount] = useState(0);
+    
+                              return (
+                                <div>
+                                  <p>You clicked {count} times</p>
+                                  <button onClick={() => setCount(count + 1)}>
+                                    Click me
+                                  </button>
+                                </div>
+                              );
+                            }
+                        </script></code></pre>
+                </section>
+    
+                <section>
+                    <h2>Point of View</h2>
+                    <p>
+                        Press <strong>ESC</strong> to enter the slide overview.
+                    </p>
+                    <p>
+                        Hold down the <strong>alt</strong> key (<strong>ctrl</strong> in Linux) and click on any element to
+                        zoom towards it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Click again to zoom back
+                        out.
+                    </p>
+                    <p>
+                        (NOTE: Use ctrl + click in Linux.)
+                    </p>
+                </section>
+    
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <h2>Computer Hardware</h2>
+                    <p>Basic Architecture</p>
+                    <div class="r-hstack">
+                        <div data-id="box1"
+                            style="background: green; width: 200px; height: 200px; margin: 10px; border-radius: 5px;">
+                            <label style="font-size: xx-large;">Input</label>
+                            <br />
+                            <ul style="font-size: small; line-height: 30px; margin-top: 10px;">
+                                <li>Mouse-Keyboard</li>
+                                <li>Camera-Mic</li>
+                                <li>Service Request</li>
+                            </ul>
+    
+                        </div>
+                        <span id="arrow"
+                            style="font-size: 80px; font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif">
+                            → </span>
+                        <div data-id="box2" style="border: dashed 1px gray">
+                            <div data-id="box2-1"
+                                style="background: blue; width: 200px; height: 60px; margin: 10px; border-radius: 5px;">
+                                <span
+                                    style="background: left no-repeat url('./media/cpu.svg'); padding-left: 30px; font-size: 30px;">Processor</span>
+                            </div>
+                            <div data-id="box2-2" class="r-hstack">
+                                <span id="arrow-down"> ↓ </span>
+                                <span id="arrow-up"> ↑ </span>
+                            </div>
+                            <div data-id="box2-3"
+                                style="background: red; width: 200px; height: 60px; margin: 10px; border-radius: 5px;">
+                                <span
+                                    style="background: left no-repeat url('./media/hard-drive.svg'); padding-left: 30px; font-size: 30px;">Memory</span>
+                            </div>
+                        </div>
+                        <span id="arrow"
+                            style="font-size: 80px; font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif">
+                            → </span>
+                        <div data-id="box3"
+                            style="background: darkgreen; width: 200px; height: 200px; margin: 10px; border-radius: 5px;">
+                            <label style="font-size: xx-large;">Output</label>
+                            <br />
+                            <ul style="font-size: small; line-height: 30px; margin-top: 10px;">
+                                <li>Display</li>
+                                <li>Print</li>
+                                <li>Service Result</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+    
+                    <div data-id="box2" style="border: dashed 1px gray">
+                        <div class="r-hstack">
+                            <div data-id="box2-1" data-auto-animate-delay="0.1"
+                                style="background: blue; width: 200px; height: 60px; margin: 10px; border-radius: 5px;">
+                                <label
+                                    style="height:50px ;background: left no-repeat url('./media/cpu.svg'); padding-left: 30px; font-size: 30px; vertical-align: middle;">Processor</label>
+                            </div>
+    
+                            <div class="r-hstack">
+                                <div data-auto-animate-delay="2"
+                                    style="background: blueviolet; width: 300px; height: 200px; margin: 10px;">
+                                    <label style="font-size: xx-large;">Architecture</label>
+                                    <br/>
+                                    <ul style="list-style: none;font-size: medium; line-height: 30px;">
+                                        <li>CISC: 
+                                            <strong>Complex Instruction Set Computer e.g. intel x86</strong>
+                                        </li>
+                                        <li>RISC: 
+                                            <strong>Reduced Instruction Set Computer e.g. ARM</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div data-auto-animate-delay="2"
+                                    style="background: darkblue; width: 300px; height: 200px; margin: 10px;">
+                                    <label style="font-size: xx-large;">Types</label>
+                                    <br/>
+                                    <ul style="list-style: none;font-size: medium; line-height: 30px;">
+                                        <li>microProcessor <strong>e.g. CPU, GPU</strong>
+                                        </li>
+                                        <li>microController or Embedded Processors</li>
+                                        <li>Digital Signal Processor</li>
+                                        <li>ASSP, ASIP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="r-hstack">
+                            <div data-id="box2-3" data-auto-animate-delay="0.1"
+                                style="background: red; width: 200px; height: 60px; margin: 10px; border-radius: 5px;">
+                                <span
+                                    style="background: left no-repeat url('./media/hard-drive.svg'); padding-left: 30px; font-size: 30px;">Memory</span>
+                            </div>
+    
+                            <div class="r-hstack">
+                                <div data-auto-animate-delay="2"
+                                    style="background: orangered; width: 300px; height: 200px; margin: 10px;">
+                                    <label style="font-size: xx-large;">RAM</label>
+                                    <br/>
+                                    <p style="list-style: none;font-size: medium; line-height: 30px;">
+                                        Random access memory (RAM) is a computer's short-term memory. None of your programs would work without RAM.
+                                    </p>
+                                </div>
+                                <div data-auto-animate-delay="2"
+                                    style="background: tomato; width: 300px; height: 200px; margin: 10px;">
+                                    <label style="font-size: xx-large;">Data Storage</label>
+                                    <p style="list-style: none;font-size: medium;line-height: 30px;">
+                                        Technology consisting of computer components and recording media that are used to retain digital data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+    
+                       
+                    </div>
+            <h2 style="margin-top: 20px;">Computer Hardware</h2>
+            </section>
+            <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                <div class="r-stack">
+                    <div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;">
+                    </div>
+                    <div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;">
+                    </div>
+                    <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;">
+                    </div>
+                </div>
+                <h2 style="margin-top: 20px;">Auto-Animate</h2>
+            </section>
+    
+            <section>
+                <h2>Touch Optimized</h2>
+                <p>
+                    Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your
+                    slides.
+                </p>
+            </section>
+    
+            <section data-markdown>
+                <script type="text/template">
+                            ## Markdown support
+    
+                            Write content using inline or external Markdown.
+                            Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+    
+                            ```html []
+                            <section data-markdown>
+                              ## Markdown support
+    
+                              Write content using inline or external Markdown.
+                              Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+                            </section>
+                            ```
+                        </script>
+            </section>
+    
+            <section>
+                <p>Add the <code>r-fit-text</code> class to auto-size text</p>
+                <h2 class="r-fit-text">FIT TEXT</h2>
+            </section>
+    
+            <section>
+                <section id="fragments">
+                    <h2>Fragments</h2>
+                    <p>Hit the next arrow...</p>
+                    <p class="fragment">... to step through ...</p>
+                    <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span
+                            class="fragment">slide.</span></p>
+    
+                    <aside class="notes">
+                        This slide has fragments which are also stepped through in the notes window.
+                    </aside>
+                </section>
+                <section>
+                    <h2>Fragment Styles</h2>
+                    <p>There's different types of fragments, like:</p>
+                    <p class="fragment grow">grow</p>
+                    <p class="fragment shrink">shrink</p>
+                    <p class="fragment fade-out">fade-out</p>
+                    <p>
+                        <span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+                        <span style="display: inline-block;" class="fragment fade-up">up, </span>
+                        <span style="display: inline-block;" class="fragment fade-down">down, </span>
+                        <span style="display: inline-block;" class="fragment fade-left">left</span>
+                    </p>
+                    <p class="fragment fade-in-then-out">fade-in-then-out</p>
+                    <p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+                    <p>Highlight <span class="fragment highlight-red">red</span> <span
+                            class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span>
+                    </p>
+                </section>
+            </section>
+    
+            <section id="transitions">
+                <h2>Transition Styles</h2>
+                <p>
+                    You can select from different transitions, like: <br>
+                    <a href="?transition=none#/transitions">None</a> -
+                    <a href="?transition=fade#/transitions">Fade</a> -
+                    <a href="?transition=slide#/transitions">Slide</a> -
+                    <a href="?transition=convex#/transitions">Convex</a> -
+                    <a href="?transition=concave#/transitions">Concave</a> -
+                    <a href="?transition=zoom#/transitions">Zoom</a>
+                </p>
+            </section>
+    
+            <section id="themes">
+                <h2>Themes</h2>
+                <p>
+                    reveal.js comes with a few themes built in: <br>
+                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/black.css'); return false;">Black
+                        (default)</a> -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/white.css'); return false;">White</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/league.css'); return false;">League</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/sky.css'); return false;">Sky</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/beige.css'); return false;">Beige</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/simple.css'); return false;">Simple</a>
+                    <br>
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/serif.css'); return false;">Serif</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/blood.css'); return false;">Blood</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/night.css'); return false;">Night</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/moon.css'); return false;">Moon</a>
+                    -
+                    <a href="#"
+                        onclick="document.getElementById('theme').setAttribute('href','dist/theme/solarized.css'); return false;">Solarized</a>
+                </p>
+            </section>
+    
+            <section>
+                <section data-background="#dddddd">
+                    <h2>Slide Backgrounds</h2>
+                    <p>
+                        Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS
+                        color formats are supported.
+                    </p>
+                    <a href="#" class="navigate-down">
+                        <img class="r-frame" style="background: rgba(255,255,255,0.1);" width="178" height="238"
+                            data-src="https://static.slid.es/reveal/arrow.png" alt="Down arrow">
+                    </a>
+                </section>
+                <section data-background="https://static.slid.es/reveal/image-placeholder.png">
+                    <h2>Image Backgrounds</h2>
+                    <pre><code class="hljs html">&lt;section data-background="image.png"&gt;</code></pre>
+                </section>
+                <section data-background="https://static.slid.es/reveal/image-placeholder.png"
+                    data-background-repeat="repeat" data-background-size="100px">
+                    <h2>Tiled Backgrounds</h2>
+                    <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+                </section>
+                <section
+                    data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
+                    data-background-color="#000000">
+                    <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <h2>Video Backgrounds</h2>
+                        <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+                    </div>
+                </section>
+                <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+                    <h2>... and GIFs!</h2>
+                </section>
+            </section>
+    
+            <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+                <h2>Background Transitions</h2>
+                <p>
+                    Different background transitions are available via the backgroundTransition option. This one's
+                    called "zoom".
+                </p>
+                <pre><code class="hljs javascript">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+            </section>
+    
+            <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+                <h2>Background Transitions</h2>
+                <p>
+                    You can override background transitions per-slide.
+                </p>
+                <pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+            </section>
+    
+            <section data-background-iframe="https://hakim.se" data-background-interactive>
+                <div
+                    style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                    <h2>Iframe Backgrounds</h2>
+                    <p>Since reveal.js runs on the web, you can easily embed other web content. Try interacting with the
+                        page in the background.</p>
+                </div>
+            </section>
+    
+            <section>
+                <h2>Tabular Tables</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Value</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apples</td>
+                            <td>$1</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Lemonade</td>
+                            <td>$2</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Bread</td>
+                            <td>$3</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <section>
+                <h2>Clever Quotes</h2>
+                <p>
+                    These guys come in two forms, inline: <q
+                        cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The
+                        nice thing about standards is that there are so many to choose from</q> and block:
+                </p>
+                <blockquote
+                    cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+                    &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of
+                    typewriters would
+                    reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+                </blockquote>
+            </section>
+    
+            <section>
+                <h2>Intergalactic Interconnections</h2>
+                <p>
+                    You can link between slides internally,
+                    <a href="#/2/3">like this</a>.
+                </p>
+            </section>
+    
+            <section>
+                <h2>Speaker View</h2>
+                <p>There's a <a href="https://revealjs.com/speaker-view/">speaker view</a>. It includes a timer, preview
+                    of the upcoming slide as well as your speaker notes.</p>
+                <p>Press the <em>S</em> key to try it out.</p>
+    
+                <aside class="notes">
+                    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
+                    open the speaker notes window (hit 's' on your keyboard).
+                </aside>
+            </section>
+    
+            <section>
+                <h2>Export to PDF</h2>
+                <p>Presentations can be <a href="https://revealjs.com/pdf-export/">exported to PDF</a>, here's an
+                    example:</p>
+                <iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355"
+                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+            </section>
+    
+            <section>
+                <h2>Global State</h2>
+                <p>
+                    Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+                    will be added as a class to the document element when the slide is open. This lets you
+                    apply broader style changes, like switching the page background.
+                </p>
+            </section>
+    
+            <section data-state="customevent">
+                <h2>State Events</h2>
+                <p>
+                    Additionally custom events can be triggered on a per slide basis by binding to the
+                    <code>data-state</code> name.
+                </p>
+                <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+    Reveal.on( 'customevent', function() {
+        console.log( '"customevent" has fired' );
+    } );
+                        </code></pre>
+            </section>
+    
+            <section>
+                <h2>Take a Moment</h2>
+                <p>
+                    Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and
+                    want to take distracting slides off the screen.
+                </p>
+            </section>
+    
+            <section>
+                <h2>Much more</h2>
+                <ul>
+                    <li>Right-to-left support</li>
+                    <li><a href="https://revealjs.com/api/">Extensive JavaScript API</a></li>
+                    <li><a href="https://revealjs.com/auto-slide/">Auto-progression</a></li>
+                    <li><a href="https://revealjs.com/backgrounds/#parallax-background">Parallax backgrounds</a></li>
+                    <li><a href="https://revealjs.com/keyboard/">Custom keyboard bindings</a></li>
+                </ul>
+            </section>
+    
+            <section style="text-align: left;">
+                <h1>THE END</h1>
+                <p>
+                    - <a href="https://slides.com">Try the online editor</a> <br>
+                    - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+                </p>
+            </section>
+    
+        </div>
+    
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/zoom/zoom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/notes/notes.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/search/search.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/markdown/markdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/math/math.min.js"></script>
+    
+        <script>
+    
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                center: true,
+                hash: true,
+    
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath]
+            });
+    
+        </script>
+    
+    </body>
+    
+    </html>
